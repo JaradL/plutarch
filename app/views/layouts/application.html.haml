@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Plutarch
+    %meta{:content => "width=device-width,initial-scale=1", :name => "viewport"}/
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_importmap_tags
+  %body
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      .container-fluid
+        = image_tag("cornucopia.png", :size => '75x40')
+        = link_to 'Plutarch', root_path, class: 'navbar-brand'
+        %button.navbar-toggler{"aria-controls" => "navbarColor03", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-bs-target" => "#navbarColor03", "data-bs-toggle" => "collapse", :type => "button"}
+          %span.navbar-toggler-icon
+        #navbarColor03.collapse.navbar-collapse
+          %ul.navbar-nav.mr-auto
+            %li{:class => "nav-item #{active_class(features_path)}"}
+              = link_to 'Features', features_path, class: 'nav-link'
+            %li{:class => "nav-item #{active_class(pricing_path)}"}
+              = link_to 'Pricing', pricing_path, class: 'nav-link'
+            %li{:class => "nav-item #{active_class(about_path)}"}
+              = link_to 'About', about_path, class: 'nav-link'
+          %ul.navbar-nav.ms-auto
+            - if user_signed_in?
+              %li{:class => "nav-item #{active_class(edit_user_registration_path)}"}
+                = link_to "Hi, #{current_user.email}", edit_user_registration_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(destroy_user_session_path)}"}
+                = link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'nav-link'
+            - else
+              %li{:class => "nav-item #{active_class(new_user_session_path)}"}
+                = link_to 'Sign In', new_user_session_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(new_user_registration_path)}"}
+                = link_to 'Sign Up', new_user_registration_path, class: 'nav-link'
+    %p.notice= notice
+    %p.alert= alert
+    = yield
