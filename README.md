@@ -1,24 +1,24 @@
-# README
+# Plutarch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![GitHub latest release](https://img.shields.io/github/v/release/JaradL/plutarch?include_prereleases)
+![GitHub downloads](https://img.shields.io/github/downloads/JaradL/plutarch/total)
+[![GitHub license](https://img.shields.io/github/license/JaradL/plutarch.svg)](https://github.com/JaradL/plutarch/blob/master/LICENSE)
 
-Things you may want to cover:
+Plutarch is an open-source web application that helps you keep track of your finances.
 
-* Ruby version
+You can use Plutarch by hosting it yourself, or maybe I'll host it one day if I ever feel like forking over the cash (don't hold your breath).
 
-* System dependencies
+## Features
 
-* Configuration
+* Insertion and management of transactions
+* Ability to organize transactions using tags
+* Facilitate uploading and organizing of receipts
+* Support for importing transactions (CSV format)
+* Reports that visualize financials (showing weekly balance and most expensive tags, for example)
+* Supports multiple currencies
+* Available in multiple languages
+* Weekly summary available through e-mail
 
-* Database creation
+## Contact
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Don't contact me and I won't contact you. Deal?
