@@ -1,0 +1,51 @@
+.home-section {
+    width: 40%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.title-lg {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: calc(1.325rem + 0.9vw);
+}
+
+.title-md {
+    box-sizing: border-box;
+    color: rgb(39, 39, 39);
+    text-decoration: none solid rgb(39, 39, 39);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(39, 39, 39);
+    perspective-origin: 150.5px 42px;
+    transform-origin: 150.5px 42px;
+    caret-color: rgb(39, 39, 39);
+    border: 0px none rgb(39, 39, 39);
+    font: normal normal 700 normal 34px / 42px Walsheim, Helvetica, Arial, serif;
+    outline: rgb(39, 39, 39) none 0px;
+}
+
+.p-md {
+    box-sizing: border-box;
+    text-decoration: none solid rgb(116, 116, 116);
+    text-size-adjust: 100%;
+    column-rule-color: rgb(116, 116, 116);
+    perspective-origin: 150.5px 42px;
+    transform-origin: 150.5px 42px;
+    caret-color: rgb(116, 116, 116);
+    border: 0px none rgb(116, 116, 116);
+    font: normal normal 400 normal 18px / 28px Walsheim, Helvetica, Arial, serif;
+    outline: rgb(116, 116, 116) none 0px;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.background {
+    background-color: #ffffff;
+    opacity: 1;
+    background-image: radial-gradient(#000000 0.9500000000000001px, transparent 0.9500000000000001px), radial-gradient(#000000 0.9500000000000001px, #ffffff 0.9500000000000001px);
+    background-size: 38px 38px;
+    background-position: 0 0, 19px 19px;
+}

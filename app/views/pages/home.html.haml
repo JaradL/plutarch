@@ -1,1 +1,51 @@
-%h1 Home
+.m-5
+  .text-center.m-4.fs-1.fw-bold
+    Master your finances
+  .text-center.m-4.fs-3
+    People who budget have higher financial wellbeing than those who don't - and it doesn't have to be complex
+  .row.m-4
+    .col-xl-2.col-sm-6.col-12.offset-xl-4
+      .card
+        .card-content
+          .card-body
+            .media.d-flex
+              .text-right
+                %h3 26%
+                %span Don't have emergency savings
+              .align-self-center.mx-auto
+                %i.bi.bi-graph-down-arrow{style: "font-size: 2.5rem; color: red;"}
+    .col-xl-2.col-sm-6.col-12
+      .card
+        .card-content
+          .card-body
+            .media.d-flex
+              .text-right
+                %h3 22%
+                %span Are worried about their savings
+              .align-self-center.mx-auto
+                %i.bi.bi-bank{style: "font-size: 2.5rem; color: blue;"}
+  .row.m-4
+    .col-xl-2.col-sm-6.col-12.offset-xl-4
+      .card
+        .card-content
+          .card-body
+            .media.d-flex
+              .text-right
+                %h3 54%
+                %span Don't use any type of budget
+              .align-self-center.mx-auto
+                %i.bi.bi-calculator{style: "font-size: 2.5rem; color: black;"}
+    .col-xl-2.col-sm-6.col-12
+      .card
+        .card-content
+          .card-body
+            .media.d-flex
+              .text-right
+                %h3 61%
+                %span Can't afford a $1000 emergency
+              .align-self-center.mx-auto
+                %i.bi.bi-cash-stack{style: "font-size: 2.5rem; color: green;"}
+  .text-center.m-5.fs-3
+    Plutarch can help your achieve financial freedom with its easy no-data-entry tools
+  .col-xs-8.col-xs-offset-4.text-center
+    %a.button.btn.btn-primary.primary-button.rounded.text-center{ :href => new_user_registration_path } Start your journey to financial freedom
