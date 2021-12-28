@@ -1,17 +1,28 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.signup-form
+  .form-horizontal
+    .col-xs-8.col-xs-offset-4
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        %h2 Log in
+        = render "devise/shared/error_messages", resource: resource
+        .form-group
+          = f.label :email, :class => "label control-label col-xs-4"
+          .col-xs-8
+            = f.email_field :email, autofocus: true, autocomplete: "email", :class => "input form-control"
+        .form-group
+          = f.label :password, :class => "label control-label col-xs-4"
+          .col-xs-8
+            = f.password_field :password, autocomplete: "current-password", :class => "input form-control"
+        - if devise_mapping.rememberable?
+          .field
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .form-group
+          .col-xs-8.col-xs-offset-4.text-center
+            .actions
+              = f.submit "Sign in", :class => "btn btn-md btn-primary btn-center rounded"
+        .text-center
+          Don't have an account?
+          %a{:href => new_user_registration_path} Sign up
+        .text-center
+          %a{:href => new_user_password_path} Forgot password?
+        
