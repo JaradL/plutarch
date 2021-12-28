@@ -7,5 +7,5 @@ Rails.application.routes.draw do
 
   get 'about', to: 'pages#about'
 
-  devise_for :user, :path => '', :path_names => { :sign_in => "signin", :sign_out => "signout", :sign_up => "signup" }
+  devise_for :user, :path => '', :path_names => { :sign_in => "signin", :sign_out => "signout", :sign_up => "signup" }, controllers: { registrations: "registrations" }
 end

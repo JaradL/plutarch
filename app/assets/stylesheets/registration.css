@@ -15,7 +15,7 @@ body {
 }
 
 .form-control,
-.btn {
+.button {
     border-radius: 3px;
 }
 
@@ -55,7 +55,7 @@ body {
     margin-top: 2px;
 }
 
-.signup-form .btn {
+.signup-form .button {
     font-size: 16px;
     font-weight: bold;
     background: #151515;
@@ -64,8 +64,8 @@ body {
     min-width: 140px;
 }
 
-.signup-form .btn:hover,
-.signup-form .btn:focus {
+.signup-form .button:hover,
+.signup-form .button:focus {
     background: #454545;
     outline: none !important;
 }
