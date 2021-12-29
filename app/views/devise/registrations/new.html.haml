@@ -4,10 +4,18 @@
       = form_for(resource, as: resource_name, url: user_registration_path(resource_name)) do |f|
         %h2 Sign Up
         = render "devise/shared/error_messages", resource: resource
+        .form-group 
+          = f.label :first_name, :class => "label control-label col-xs-4"
+          .col-xs-8
+            = f.text_field :first_name, autofocus: true, :class => "input form-control"
+        .form-group 
+          = f.label :last_name, :class => "label control-label col-xs-4"
+          .col-xs-8
+            = f.text_field :last_name, :class => "input form-control"
         .form-group
           = f.label :email, :class => "label control-label col-xs-4"
           .col-xs-8
-            = f.email_field :email, autofocus: true, autocomplete: "email", :class => "input form-control"
+            = f.email_field :email, autocomplete: "email", :class => "input form-control"
         .form-group
           = f.label :password, :class => "label control-label col-xs-4"
           .col-xs-8

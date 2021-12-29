@@ -7,7 +7,7 @@
         .form-group
           = f.label :email, :class => "label control-label col-xs-4"
           .col-xs-8
-            = f.email_field :email, autofocus: true, autocomplete: "email", :class => "input form-control"
+            = f.email_field :email, autocomplete: "email", :class => "input form-control"
           - if devise_mapping.confirmable? && resource.pending_reconfirmation?
             %div
               Currently waiting confirmation for: #{resource.unconfirmed_email}
