@@ -23,7 +23,22 @@
           %span.navbar-toggler-icon
         #navbarColor03.collapse.navbar-collapse
           %ul.navbar-nav.mr-auto
-            - if !user_signed_in?
+            - if user_signed_in?
+              %li{:class => "nav-item #{active_class(features_path)}"}
+                = link_to 'Budget', features_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(features_path)}"}
+                = link_to 'Cash', features_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(pricing_path)}"}
+                = link_to 'ETFs', pricing_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(pricing_path)}"}
+                = link_to 'Stocks', pricing_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(pricing_path)}"}
+                = link_to 'Dividends', pricing_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(pricing_path)}"}
+                = link_to 'Super', pricing_path, class: 'nav-link'
+              %li{:class => "nav-item #{active_class(pricing_path)}"}
+                = link_to 'History', pricing_path, class: 'nav-link'
+            -else
               %li{:class => "nav-item #{active_class(features_path)}"}
                 = link_to 'Features', features_path, class: 'nav-link'
               %li{:class => "nav-item #{active_class(pricing_path)}"}
