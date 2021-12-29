@@ -2,3 +2,5 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 import 'bootstrap-icons/font/bootstrap-icons.css'
+import 'bootstrap'
+import './src/application.scss'
